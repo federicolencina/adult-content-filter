@@ -48,11 +48,7 @@ public class Layout {
                 if (primaryCheckBox.isSelected() && defaultCheckBox.isSelected()) {
                     defaultCheckBox.setSelected(false);
                 }
-                if (primaryCheckBox.isSelected() || defaultCheckBox.isSelected()) {
-                    applySettingsButton.setEnabled(true);
-                } else {
-                    applySettingsButton.setEnabled(false);
-                }
+                applySettingsButton.setEnabled(primaryCheckBox.isSelected() || defaultCheckBox.isSelected());
             }
         });
         defaultCheckBox.addItemListener(new ItemListener() {
@@ -61,11 +57,7 @@ public class Layout {
                 if (defaultCheckBox.isSelected() && primaryCheckBox.isSelected()) {
                     primaryCheckBox.setSelected(false);
                 }
-                if (primaryCheckBox.isSelected() || defaultCheckBox.isSelected()) {
-                    applySettingsButton.setEnabled(true);
-                } else {
-                    applySettingsButton.setEnabled(false);
-                }
+                applySettingsButton.setEnabled(primaryCheckBox.isSelected() || defaultCheckBox.isSelected());
             }
         });
         applySettingsButton.addActionListener(new ActionListener() {
